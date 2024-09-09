@@ -1,0 +1,47 @@
+# Models / Migrations
+
+## Creating a model
+
+1. Go to an app (or create a new one with `python manage.py startapp {appname}`)
+2. Create some model classes
+2. Run `python manage.py makemigrations {appname}` to create a migration file for the specified app's models
+
+## Applying migrations
+
+`python manage.py migrate`
+
+## Creating a superuser
+
+`python manage.py createsuperuser`
+
+## Putting models into the admin panel
+
+Add `admin.site.register(ModelName)` to the admin.py file in the app
+
+# Views
+
+## This thing (yeah im lazy)
+
+```html
+{% if todos %}
+    <ul>
+    {% for todo in todos %}
+        <li><a href="{% url 'todos:details' todo.id %}">{{ todo.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No todos are available.</p>
+{% endif %}
+```
+
+# Routing
+
+## 
+
+# Misc
+
+## Django shell thingy (kinda like the tinker artisan command in laravel) 
+
+`python manage.py shell`
+
+##

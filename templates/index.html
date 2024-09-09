@@ -1,0 +1,20 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
+
+	<body>
+		<div class="container mx-auto">
+			<section class="flex flex-col items-center justify-center h-screen gap-5">
+				<h1 class="text-5xl font-bold">Welcome to Django Todo</h1>
+				<a href="{% url 'todos:index' %}" class="hover:underline hover:text-emerald-500">Todo List</a>
+			</section>
+		</div>
+	</body>
+</html>
